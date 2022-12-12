@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="../../utils/Axios/index.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="fn">获取笑话</button>
+      <div class="joke" v-show="joke">
+        <h2>{{title}}</h2>
+        <h3 v-html="joke"></h3>
+      </div>
+    </div>
+
+    <script type="importmap">
+      { "imports": { "vue": "../../utils/Vue/index.js", "axios": "../../utils/Axios/index.js" } }
+    </script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
